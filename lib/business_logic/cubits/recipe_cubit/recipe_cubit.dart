@@ -17,7 +17,6 @@ class RecipeCubit extends Cubit<RecipeState> {
       recipes = value;
       emit(RecipesSuccessState());
     }).catchError((error) {
-      print('error ${error.toString()}');
       emit(RecipesErrorState());
     });
   }

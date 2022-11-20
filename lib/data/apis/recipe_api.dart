@@ -13,10 +13,8 @@ class RecipeApi {
             '?type=public&q=$typeOfRecipe&app_id=$applicationId&app_key=$apiKey');
 
     if (response.statusCode == 200) {
-      print('recipeList');
       return response.data['hits'];
     } else {
-      print('error');
       return [];
     }
   }

@@ -6,7 +6,6 @@ class RecipeRepository {
     List<dynamic> recipes_temp = await RecipeApi.getAllRecipe();
 
     if (recipes_temp.isEmpty) {
-      print('something error in repo');
       return [];
     } else {
       List<Recipe> recipes = recipes_temp
